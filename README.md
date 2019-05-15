@@ -34,6 +34,12 @@ strace -p pid -tt -T -f -o out.txt
 awk 'substr($NF, 2, 8) - 0.1 > 0 {print}' out.txt
 ```
 
+# perf trace 
+
+```
+sudo perf trace -t 23555 --duration 0.001 -e write
+```
+
 # perf top
 ```
 sudo perf top [-t tid | -p pid] -g
