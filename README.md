@@ -33,3 +33,8 @@ strace -p pid -tt -T -f -o out.txt
 从最后一个字段的下标2开始取8个字符就是耗时，查找超过耗时大于0.1s的操作。
 awk 'substr($NF, 2, 8) - 0.1 > 0 {print}' out.txt
 ```
+
+# perf top
+```
+sudo perf top [-t tid | -p pid] -g
+```
