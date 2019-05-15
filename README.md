@@ -17,3 +17,12 @@ info proc
 set solib-search-path path
 ## 查看栈帧
 bt (backtrace)
+
+# strace
+
+```
+strace -p pid -tt -T -F -e trace=write
+[pid 3825188] 14:12:15.671248 write(7062, "2019/05/15-14:12:15.671056 7eecd"..., 108) = 108 <0.000207>
+
+----"-f"----------"-tt"----"syscall"-------------------"params"-------------------------"ret"---"cost"----
+```
