@@ -2,6 +2,8 @@
 
 
 # gdb process
+
+```
 ## 查找进程的pid
 ps aux | grep "process_name"
 
@@ -17,6 +19,7 @@ info proc
 set solib-search-path path
 ## 查看栈帧
 bt (backtrace)
+```
 
 # strace
 
